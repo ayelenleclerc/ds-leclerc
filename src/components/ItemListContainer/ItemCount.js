@@ -14,15 +14,23 @@ const style = {
     borderRadius: "5px",
   },
 };
-export const ItemCount = () => {
+const ItemCount = () => {
+  const stock = 10;
+
   const [contador, setContador] = useState(0);
+  const agregar = () => {
+    contador < stock ? setContador(contador + 1) : setContador(contador);
+  };
+  const restar = () => {
+    contador > 0 ? setContador(contador - 1) : setContador(contador);
+  };
   return (
     <div style={style.div}>
-      <BotonCount operacion="+" funcion={() => setContador(contador + 1)} />
+      <BotonCount operacion="+" funcion={agregar} />
       <Display style={style.display} value={contador}>
         {" "}
       </Display>
-      <BotonCount operacion="-" funcion={() => setContador(contador - 1)} />
+      <BotonCount operacion="-" funcion={restar} />
     </div>
   );
 };
