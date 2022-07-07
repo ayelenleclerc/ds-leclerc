@@ -1,10 +1,10 @@
 const style = {
   boton: {
-    width: "50px",
-    height: "50px",
+    width: "30px",
+    height: "30px",
     border: "none",
     color: " #3C91E6",
-    fontSize: "30px",
+    fontSize: "18px",
   },
 };
 const BotonCount = ({ operacion, funcion }) => {

@@ -8,10 +8,19 @@ const style = {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    width: "450px",
-    height: "150px",
+    width: "130px",
+    height: "50px",
     border: "1px solid grey",
     borderRadius: "5px",
+  },
+  noStock: {
+    color: "red",
+    fontSize: "10px",
+    backgroundColor: "white",
+    padding: "5px",
+    borderRadius: "5px",
+    width: "50px",
+    height: "30px",
   },
 };
 const ItemCount = () => {
@@ -29,7 +38,7 @@ const ItemCount = () => {
       {contador < stock && contador > 0 ? (
         <Display style={style.display} value={contador} />
       ) : (
-        <Display style={style.display} value={"No hay más Stock"} />
+        <h6 style={style.noStock}>No hay más Stock</h6>
       )}
       <BotonCount operacion="-" funcion={restar} />
     </div>

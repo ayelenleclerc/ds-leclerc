@@ -2,16 +2,16 @@ const style = {
   display: {
     border: "1px solid white",
     borderRadius: "5px",
-    width: "250px",
-    height: "50px",
+    width: "60px",
+    height: "40px",
     backgroundColor: "white",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    fontSize: "18px",
+    fontSize: "16px",
     fontWeight: "bold",
-    color: "black",
+    color: "green",
   },
 };
 const Display = ({ value }) => {
