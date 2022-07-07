@@ -16,8 +16,7 @@ const style = {
 };
 const ItemCount = () => {
   const stock = 10;
-
-  const [contador, setContador] = useState(0);
+  const [contador, setContador] = useState(1);
   const agregar = () => {
     contador < stock ? setContador(contador + 1) : setContador(contador);
   };
@@ -27,9 +26,11 @@ const ItemCount = () => {
   return (
     <div style={style.div}>
       <BotonCount operacion="+" funcion={agregar} />
-      <Display style={style.display} value={contador}>
-        {" "}
-      </Display>
+      {contador < stock && contador > 0 ? (
+        <Display style={style.display} value={contador} />
+      ) : (
+        <Display style={style.display} value={"No hay más Stock"} />
+      )}
       <BotonCount operacion="-" funcion={restar} />
     </div>
   );
